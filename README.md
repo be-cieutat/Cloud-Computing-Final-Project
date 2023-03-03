@@ -6,12 +6,14 @@ We chose to create an interactive webapp, complete with an immersive UI and a co
 We designed it using two dockerized systems, one for the database that contains the item cards, and the other for the frontend of the project.
 <br>
 **To-Do List**
+<br>
 *Essentials*
 - [ ] Docker setup
 - [ ] Database Structure
 - [ ] Database Entries
 - [ ] Basic UI
 - [ ] Download feature
+[]()
 *Optional*
 - [ ] Upload/Submit feature
 - [ ] Search feature
