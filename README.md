@@ -6,7 +6,7 @@ We chose to create an interactive webapp, complete with an immersive UI and a co
 <br>
 We designed it using two dockerized systems, one for the database that contains the item cards, and the other for the frontend of the project.
 </p1>
-<p2>
+
 **To-Do List**
 <br>
 *Essentials*
@@ -22,4 +22,3 @@ We designed it using two dockerized systems, one for the database that contains 
 - [ ] Sort feature (by Class, by Type, by Effect, by Rarity)
 - [ ] Immersive UI with animations
 - [ ] Dialog tree
-</p2>
