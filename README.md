@@ -13,9 +13,6 @@ We designed it using two dockerized systems, one for the database that contains 
 - [ ] Database Entries
 - [ ] Basic UI
 - [ ] Download feature
-<br>
-*Optional* 
-<br>
 - [ ] Upload/Submit feature
 - [ ] Search feature
 - [ ] Sort feature (by Class, by Type, by Effect, by Rarity)
