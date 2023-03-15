@@ -1,7 +1,0 @@
-prénom;nom;majeure
-pacôme;manceaux;CCC
-paul;soret;MNM
-alix;blain;IND
-anne;sounanthanam;IOS
-basile;puiseux;IOS
-alice;bahani;IOS
