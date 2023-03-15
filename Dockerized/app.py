@@ -10,15 +10,21 @@ db = client.mydb
 collection = db.mycollection
 mongo_data = list(collection.find())
 
-#Read data from txt file
-file_path = './static/stored.txt'
-with open(file_path, 'r') as f:
-    txt_data = f.read().splitlines()
-    txt_data = [x.split(';') for x in txt_data]
-
 @app.route("/")
 def index():
-    return render_template("index.html",results1=mongo_data,results2=txt_data)
+    return render_template("index.html", results1 = [], results2 = [])
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/submit")
+def submit():
+    return render_template("submit.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
