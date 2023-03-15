@@ -7,7 +7,7 @@ We designed it using two dockerized systems, one for the database that contains 
 - [ ] Docker setup
 - [ ] Database Structure
 - [ ] Database Entries
-- [ ] Basic UI
+- [x] Basic UI
 - [ ] Download feature <br><br>
 -  *Optionals*
 - [ ] Upload/Submit feature
