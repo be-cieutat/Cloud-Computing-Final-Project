@@ -1,0 +1,23 @@
+# Use a Python image as the base image
+FROM python:latest
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the Python script and requirements file to the working directory
+COPY app.py .
+COPY requirements.txt .
+COPY  templates/ .
+COPY  static/ .
+
+# Set the environment variable MONGO_URI to the MongoDB URI
+ENV MONGO_URI=mongodb://mongodb:27017/mydb
+
+# Install the dependencies
+RUN pip install -r requirements.txt
+
+# Open the port 5000
+EXPOSE 5000
+
+# Set the default command to run when the container starts
+CMD ["python", "app.py"]

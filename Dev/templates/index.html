@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D&D DB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ </head>
+  <body>
+    <div id="banner">
+    <h1>D&D DB</h1>
+    <h2>A Mongo DB Visualisation tool</h2>
+    <hr>
+    </div>
+
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">News</a></li>
+      <li><a href="contact.asp">Contact</a></li>
+      <li><a href="about.asp">About</a></li>
+    </ul>
+
+
+    <br>
+    <p>Here is what we have in DB and host storage !</p>
+    <li>
+      Data stored on MongoDB:
+    <br><br>
+    <table id="datatable">
+      <thead>
+        <tr>
+          {% for item in results1[0] %}
+          <th>{{ item }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in results1[1:] %}
+        <tr>
+          <td>{{ results1.prenom }}</td>
+          <td>{{ results1.nom }}</td>
+          <td>{{ results1.majeure }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </li>
+    <br><br>
+    <li>
+      Data picked up from a text file on host:
+      <br><br>
+      <table id="datatable">
+        <thead>
+          <tr>
+            {% for item in results2[0] %}
+            <th>{{ item }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in results2[1:] %}
+          <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </li>
+  </body>
+</html>
