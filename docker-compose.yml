@@ -1,0 +1,26 @@
+version: latest
+services:
+  db:
+    build: 
+      context: .
+      dockerfile: Dockerfile-db
+    image: mongo:latest
+    container_name: my-mongo-compose
+    networks:
+      - my-network
+    volumes:
+      - ./volume/data:/data/db
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile-web
+    container_name: my-flask-app-compose
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network  
+    depends_on:
+      - db
+networks:
+  my-network:
+    driver: bridge
