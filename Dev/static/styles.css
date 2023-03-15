@@ -1,7 +1,24 @@
 body {
   font-family:  Arial, Helvetica, sans-serif;
   font-size: 28px;
+  background-color: #ebd5b3;
 }
+
+
+/* Style the banner */
+
+#banner {
+  background-color: #aa0404;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  background-size:100%;  
+}
+
+
+/* Style the top navigation bar */
 
 ul {
   list-style-type: none;
@@ -31,19 +48,36 @@ li a:hover {
   background-color: #111;
 }
 
-.active {
-  background-color: #4CAF50;
+li active {
+  background-color: #252525;
 }
 
 
 
+/* Style the grid layout */
 
-#banner {
-  background-color: #aa0404;
-  color: white;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
   padding: 10px;
-  text-align: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 400px;
+  height: 400px;
 }
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+/* Style the table */
 
 #datatable {
     font-family: Arial, Helvetica, sans-serif;
