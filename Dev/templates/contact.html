@@ -6,9 +6,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 * {
   box-sizing: border-box;
@@ -30,6 +27,10 @@ input[type=submit] {
   padding: 12px 20px;
   border: none;
   cursor: pointer;
+}
+
+input[type=submit]::placeholder {
+  font-style: 'VT323';
 }
 
 input[type=submit]:hover {
@@ -82,9 +83,9 @@ input[type=submit]:hover {
 
       
     <div class="container">
-        <div style="text-align:center">
-            <h2>Contact Us</h2>
-            <p>Swing by for a cup of coffee, or leave us a message:</p>
+        <div style="font:VT323; text-align:center">
+            <h2 style="font:VT323">Contact Us</h2>
+            <p style="font:VT323">Swing by for a cup of coffee, or leave us a message:</p>
         </div>
     <div class="row">
         <div class="column">
