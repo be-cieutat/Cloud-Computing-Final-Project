@@ -2,60 +2,71 @@
 <html>
   <head>
     <title>D&D DB</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
  </head>
+ 
   <body>
-    <div id="banner">
-    <h1>Handy DB</h1>
-    <h2>A Mongo DB Visualisation tool</h2>
-    <hr>
+    <div id="banner" width="100%">
+      <img src="..\static\images\logo_D&D.png" alt="D&D logo" width="150px">
+      <p style="justify-content: center; font-family:'Press Start 2P',Arial">The Cove's Goods - A D&D Interactive Shop !</p>
+      <hr>
     </div>
-    <br>
-    <p>Here is what we have in DB and host storage !</p>
-    <li>
-      Data stored on MongoDB:
-    <br><br>
-    <table id="datatable">
-      <thead>
-        <tr>
-          {% for item in results1[0] %}
-          <th>{{ item }}</th>
-          {% endfor %}
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in results1[1:] %}
-        <tr>
-          <td>{{ results1.prenom }}</td>
-          <td>{{ results1.nom }}</td>
-          <td>{{ results1.majeure }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    </li>
-    <br><br>
-    <li>
-      Data picked up from a text file on host:
-      <br><br>
-      <table id="datatable">
-        <thead>
-          <tr>
-            {% for item in results2[0] %}
-            <th>{{ item }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-          {% for row in results2[1:] %}
-          <tr>
-            <td>{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
-            <td>{{ row[2] }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </li>
+
+    <ul style="justify-content: center; font-family:'Press Start 2P',Arial; font-size: medium;">
+      <li><a href="/">| Home</a></li>
+      <li><a href="/submit">| Submit an item</a></li>
+      <li><a href="/contact">| Contact</a></li>
+      <li><a href="/about">| About</a></li>
+    </ul>
+    <div style="display: flex;justify-content: center;align-items: center;">
+      <div class="grid-container">
+        <div width="200px">
+          <a href="https://www.aidedd.org/dnd/om.php?vo=hammer-of-thunderbolts">
+            <img src="..\static\images\images\hammer-of-thunderbolts.jpg" alt="Item 1" height="100%" width=200px>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=scarab-of-protection">
+            <img src="..\static\images\images\scarab-of-protection.jpg" alt="Item 2"  height="100%" width=200px>
+          </a>
+        </div>
+        <div width="200px">
+          <a href="https://www.aidedd.org/dnd/om.php?vo=robe-of-the-archmagi">
+            <img src="..\static\images\images\robe-of-the-archmagi.jpg" alt="Item 3"  height="100%" width=200px>
+          </a>
+        </div>  
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=hammer-of-thunderbolts">
+            <img src="..\static\images\images\staff-of-the-magi.jpg" alt="Item 4"  height="100%" width=200px>
+          </a>
+        </div>
+        <div style="border: 0px solid #cfb286;" >
+          <img src="..\static\animations\merchant\B_witch_idle_rescale_120.gif" alt="Welcome !" width="150px">
+        </div>
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=hammer-of-thunderbolts">
+            <img src="..\static\images\images\staff-of-the-magi.jpg" alt="Item 5"  height="100%" width=200px>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=scarab-of-protection">
+            <img src="..\static\images\images\scarab-of-protection.jpg" alt="Item 6"  height="100%" width=200px>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=robe-of-the-archmagi">
+            <img src="..\static\images\images\robe-of-the-archmagi.jpg" alt="Item 7"  height="100%" width=200px>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.aidedd.org/dnd/om.php?vo=hammer-of-thunderbolts">
+            <img src="..\static\images\images\staff-of-the-magi.jpg" alt="Item 8"  height="100%" width=200px>
+          </a>
+        </div>
+    </div>
+  </div>
+    
   </body>
 </html>
